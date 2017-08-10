@@ -1,0 +1,130 @@
+$color-black: #252525;
+$color-grey: #f5f5f5;
+
+
+//navbar
+/* USING BOOTSTRAP 3.0.3 */
+.navbar-inverse { //change the background of navbar
+	background-color: black;
+	border-color: transparent;
+}
+.navbar-header {
+	text-align: center;
+	width: 100%;
+}
+nav {
+	.navbar-brand { //centers and sets font size, can change font here
+		font-size: 35px;
+		font-family: sans-serif;
+		float: none;
+		}
+	.navbar-toggle {
+		margin: 13px 15px 13px 0;
+	}
+  .navbar-nav {
+    width: 100%;
+    text-align: center; //centers list again
+    > li {
+      display: inline-flex; //centers list
+      float: none;
+      > a {  //keeps horizontal spacing apart
+        padding-left: 30px;
+        padding-right: 30px;
+        }
+    }
+  }
+	a {  //transition smoothly
+		font-size: 18px;
+		// padding-bottom: 20px !important; //not sure what these do
+		// padding-top: 20px !important;
+    transition: all 0.3s ease;
+	}
+}
+
+nav.navbar.shrink {
+	min-height: 0px; //sets min hight dependent on margins
+  .navbar-brand {
+		font-size: 25px; //sets shrink font size
+	}
+
+  a {		//appearance/spaces when shrunk
+    font-size: 15px;
+    padding-bottom: 5px !important;
+    padding-top: 5px !important;
+  }
+  .navbar-toggle { //hamburger button when shrunk
+    margin: 8px 15px 8px 0;
+    padding: 4px 4px;
+  }
+}
+
+
+// Mixin for shadow button with block sliding up
+@mixin btn-split($color, $borderColor: $color, $borderWidth: 2px) {
+  position: relative;
+  padding: 0.2em 0.1em;
+  color: $color;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: $borderWidth solid $borderColor;
+    transition: transform 0.3s ease-in;
+  }
+
+  &:hover {
+    &:before,
+    &:after {
+      transition: transform 0.3s ease-out;
+    }
+    &:before {
+      transform: translate3d(-$borderWidth - 1px, $borderWidth + 1px, 0);
+    }
+    &:after {
+      transform: translate3d($borderWidth + 1px, -$borderWidth - 1px, 0);
+    }
+  }
+}
+
+// Start of styling
+* {
+  box-sizing: border-box;
+}
+
+body {
+	background-image: url("ak08.JPG");
+  margin-top: 100px;
+	margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  background-color: $color-grey;
+}
+
+h1 {
+  font-size: 40px;
+  font-family: monospace;
+	text-align: center;
+}
+
+h2 {
+  font-size: 25px;
+  font-family: monospace;
+}
+
+a {
+  font-size: 25px;
+  font-family: monospace;
+  text-decoration: none;
+}
+
+.btn {
+  @include btn-split($color-black);
+}
