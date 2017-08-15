@@ -12,20 +12,42 @@ import {
 export default class Research extends Component {
   render() {
     return (
-<div className="App">
-  <h2>In general, how would you describe
-  the eating style/needs of your group?</h2><br/>
-    <select className="energylevel">
-      <option value=""></option>
-      <option value="Light">Light Eaters</option>
-        <option value="Normal">Normal</option>
-      <option value="Heavy">Eat alot</option>
-    </select><br/>
-  <a className="btn" href="#">Get Started</a>
-
-</div>
-)};
+      <div className="Research">
+        <div className="paper1">
+          <div>
+            <div className="thumbnail">
+              <a href="#"><img className="researchPic" src="pdfIcon.png" alt="pdf"/></a>
+                <div className="caption">
+                  <h3>Sky's Research</h3>
+                  <p>This is info about research</p>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div className="paper2">
+          <div>
+            <div className="thumbnail">
+              <a href="#"><img className="researchPic" src="pdfIcon.png" alt="pdf"/></a>
+                <div className="caption">
+                  <h3>Sky's Research</h3>
+                  <p>This is info about research</p>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div className="paper3">
+          <div>
+            <div className="thumbnail">
+              <a href="#"><img className="researchPic" src="pdfIcon.png" alt="pdf"/></a>
+                <div className="caption">
+                  <h3>Sky's Research</h3>
+                  <p>This is info about research</p>
+                </div>
+            </div>
+          </div>
+        </div>
+        {/*<a className="btn" href="#">Get Started</a>*/}
+      </div>
+    );
+  };
 };
-
-//energylevel onChange={this.energylevelSet.bind(this)} value={this.state.energylevel}
-//inputs for diet checked={this.state.vaccinations} onChange={this.vacChange.bind(this)}

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)http://localhost:3000/Contact -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <link rel="shortcut icon" href="http://localhost:3000/favicon.ico">
+    <script src="./React App_files/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./React App_files/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="./React App_files/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  <style type="text/css">body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+</style><style type="text/css">/* USING BOOTSTRAP 3.0.3 */
+.navbar-inverse {
+  background-color: black;
+  border-color: transparent; }
+
+.navbar-header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex: auto;
+      flex: auto;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  width: 100%;
+}
+
+nav .navbar-brand {
+  font-size: 35px;
+  font-family: monospace;
+  float: none;
+}
+nav .navbar-toggle {
+  margin: 13px 15px 0; }
+nav .navbar-nav {
+  width: 100%;
+  text-align: center; }
+  nav .navbar-nav > li {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    float: none; }
+    nav .navbar-nav > li > a {
+      padding-left: 30px;
+      padding-right: 30px; }
+nav a {
+  font-size: 18px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+
+nav.navbar.shrink {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  min-height: 30px; }
+  nav.navbar.shrink .navbar-brand {
+    font-size: 25px;
+  }
+  nav.navbar.shrink a {
+    font-size: 13px;
+    padding-bottom: 0px !important; /*padding around elements when shrunk*/
+    padding-top: 0px !important;
+  }
+  nav.navbar.shrink .navbar-toggle {
+    padding: 10px 10px; }
+/*Research*/
+.Research {
+  display: grid;
+  grid-template-columns: 20% 5% 20% 5% 20%;
+  grid-template-rows: 20% 1em 20% 1em 20%; }
+  .Research div {
+    text-align: center; }
+  .Research .paper1 {
+    grid-column-start: 1; }
+  .Research .paper2 {
+    grid-column-start: 3; }
+  .Research .paper3 {
+    grid-column-start: 5; }
+  .Research .researchPic {
+    width: 75%;
+    height: 75%; }
+  .Research h3 {
+    font-size: 16px; }
+  .Research p {
+    font-size: 10px; }
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+body {
+  background-image: url(/static/media/ak08.fdcebb4f.JPG);
+  margin-top: 100px;
+  margin-left: 20px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  height: 100vh;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  background-color: #f5f5f5; }
+
+h1 {
+  font-size: 40px;
+  font-family: monospace;
+  text-align: center; }
+
+h2 {
+  font-size: 25px;
+  font-family: monospace; }
+
+a {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  font-size: 25px;
+  font-family: sans-serif;
+  text-decoration: none; }
+
+footer {
+  text-align: right; }
+  footer p {
+    font-size: 10px;
+    font-family: cursive;
+    color: transparent; }
+
+.btn {
+  position: relative;
+  padding: 0.3em 0.4em;
+  color: #252525; }
+  .btn:before, .btn:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 2px solid #252525;
+    -webkit-transition: -webkit-transform 0.3s ease-in;
+    transition: -webkit-transform 0.3s ease-in;
+    -o-transition: transform 0.3s ease-in;
+    transition: transform 0.3s ease-in;
+    transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in; }
+  .btn:hover:before, .btn:hover:after {
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    transition: -webkit-transform 0.3s ease-out;
+    -o-transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out; }
+  .btn:hover:before {
+    -webkit-transform: translate3d(-3px, 3px, 0);
+            transform: translate3d(-3px, 3px, 0); }
+  .btn:hover:after {
+    -webkit-transform: translate3d(3px, -3px, 0);
+            transform: translate3d(3px, -3px, 0); }
+</style><style type="text/css">form {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+input {
+  margin-left: 5px;
+}
+textarea {
+  -ms-flex: 0 0 80%;
+      flex: 0 0 80%;
+  margin-left: 5px;
+}
+select {
+  margin-left: 5px;
+}
+label {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+</style></head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"><div data-reactroot="" class="centerNav"><nav class="navbar navbar-inverse navbar-fixed-top shrink"><div class="container"><div class="navbar-header"><h1><a class="navbar-brand" href="http://localhost:3000/">J. Sky Cova, LPC</a></h1><button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div><div class="collapse navbar-collapse"><ul class="nav navbar-nav"><li><a class="nav-link" href="http://localhost:3000/Research">Research</a></li><li><a class="nav-link" href="http://localhost:3000/Education">Education</a></li><li><a class="nav-link" href="http://localhost:3000/Experience">Experience</a></li><li><a class="nav-link" href="http://localhost:3000/Contact">Contact</a></li></ul></div></div></nav><div><!-- react-empty: 22 --><!-- react-empty: 23 --><!-- react-empty: 24 --><div><h1>Interested in Working Together?</h1><p>If you'd like to learn more about our services, please contact us through the form below. We'll be in touch soon!</p><form id="contact" method="post" action="http://localhost:3000/contact.php"><label><!-- react-text: 30 -->Name:<!-- /react-text --><input type="name" name="text" placeholder="first" value=" "><input type="name" name="text" placeholder="last" value=" "></label><br><label><!-- react-text: 35 -->Telephone:<!-- /react-text --><input type="tel" name="usrtel"></label><label><!-- react-text: 38 -->Email:<!-- /react-text --><input type="email" name="email" placeholder="Email" value=" "></label><br><label><!-- react-text: 42 -->Services:<!-- /react-text --><select name="services"><option value="appointment">Appointment</option><option value="inquiry">Inquiry</option><option value="workshop">Workshop</option></select></label><br><label><!-- react-text: 49 -->Message:<!-- /react-text --><textarea type="text" rows="5" cols="50" maxlength="500"> </textarea></label><br><a class="btn" href="http://localhost:3000/Contact#">Send</a></form></div></div><footer id="credit"><p> Made with love by BeccaK</p></footer></div></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <script type="text/javascript" src="./React App_files/bundle.js"></script>
+
+</body></html>

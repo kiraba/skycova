@@ -1,0 +1,9 @@
+
+h1 {
+  color: black;
+  font-family: fantasy;
+}
+
+h1:hover{
+  color: teal;
+}
