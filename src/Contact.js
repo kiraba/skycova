@@ -4,18 +4,23 @@ import './Contact.css';
 import './Education';
 import './Research';
 import $ from 'jquery';
+import ReactDOM from 'react-dom';
 
 export default class Contact extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: " ",
-      email: " ",
-      services: { value: "appointment" },
-      message: " ",
+      name: '',
+      email: '',
+      tel: '',
+      message: '',
     };
+    this.name = this.name.bind(this);
+    this.email = this.email.bind(this);
+    this.tel = this.tel.bind(this);
+    // this.services = this.services.bind(this);
+    this.message = this.message.bind(this);
   };
-
   name(event) {
     this.setState({ name: event.target.value });
   };
@@ -24,67 +29,97 @@ export default class Contact extends Component {
     this.setState({ email: event.target.value });
   };
 
-  services(event) {
-    this.setState({ services: event.target.value });
+  tel(event) {
+    this.setState({ tel: event.target.value });
   };
+
+  // services(event) {
+  //   this.setState({ services: event.target.value });
+  // };
 
   message(event) {
     this.setState({ message: event.target.value });
   };
+handleSubmit(event){
+  alert('email was submitted');
+  $.ajax({
+    type: 'Post',
+    data: 'this.state',
+    contentType: 'application/json',
+        url: 'http://localhost:3000/api/contact',
+        success: function(mailData) {
+            console.log('successfully posted to server.');
+        }
+  })
+};
+componentDidMount() {
+  var edHead = ReactDOM.findDOMNode(this);
+  edHead.style.opacity=0;
+  window.requestAnimationFrame(function() {
+    edHead.style.transition = "opacity 1000ms";
+    edHead.style.opacity = 1;
+  });
+}
+  // event.preventDefault()
   //
-  // handleSubmit(send) {
-  //   $.ajax({
-  //     url: '/contactus',
-  //     dataType: 'json',
-  //     cache: false,
-  //     success: function(data) {
-  //         // Success..
-  //     }.bind(this),
-  //     error: function(xhr, status, err) {
-  //         console.error(status, err.toString());
-  //     }.bind(this)
-  //   });
-  // };
-
+  //   fetch('/api/contact', {
+  //     method: 'POST',
+  //     headers: {
+  //       'Accept': 'application/json',
+  //       'Content-Type': 'application/json',
+  //     },
+  //     body: JSON.stringify({
+  //       name: 'this.state.name',
+  //       email: 'this.state.email',
+  //       tel: 'this.state.tel',
+  //       service: 'this.state.services',
+  //       message: 'this.state.message'
+  //       // then continue this with the other inputs, such as email body, etc.
+  //     })
   //   })
-  //   .done(function(sent) {
-  //     alert("Email sent!")
+  //   .then((response) => response.json())
+  //   .then((responseJson) => {
+  //     if (responseJson.success) {
+  //       this.setState({formSent: true})
+  //     }
+  //     else this.setState({formSent: false})
   //   })
-  //   .fail(function( xhr, status, errorThrown ) {
-  //    alert( "Sorry, there was a problem!" );
-  //    console.log( "Error: " + errorThrown );
-  //    console.log( "Status: " + status );
-  //    console.dir( xhr );
+  //   .catch((error) => {
+  //     console.error(error);
   //   });
-  //   this.props.history.push('/Experience');
   // }
 
   render() {
     return (
-      <div class="container">
-        <form id="contact" method="post" action="contact.php" onSubmit={this.handleSubmit}>
+      <div>
+      <h1>Contact</h1>
+  <h2>Feel free to contact me by phone,
+    or use the contact form below.</h2>
+
+  <h3>Sky sky SKYYY, MA, LCPC<br/>
+      Counseling Services<br/>
+      111 N. Higgins Avenue<br/>
+      Missoula, Montana 59802<br/>
+      406.360.3262<br/>
+  </h3>
+  <h2>Contact Form:</h2>
+      <div className="container">
+        <form id="contact" onSubmit={this.handleSubmit}>
           <fieldset>
-            <input placeholder="Your name" type="text" tabindex="1" required autofocus/>
+            <input placeholder="Your name" type="text" tabIndex="1" value={this.state.name} onChange={this.name} required autoFocus/>
           </fieldset>
           <fieldset>
-            <input placeholder="Your Email Address" type="email" tabindex="2" required/>
+            <input placeholder="Your Email Address" type="email" tabIndex="2" value={this.state.email} onChange={this.email} required/>
           </fieldset>
           <fieldset>
-            <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" required/>
+            <input placeholder="Your Phone Number (optional)" type="tel" tabIndex="3" value={this.state.tel} onChange={this.tel}/>
+
+            <textarea placeholder="Type your message here...." tabIndex="5" value={this.state.message} onChange={this.message} required></textarea>
           </fieldset>
-                <label>Regarding
-                  <select name="services" value={this.state.value} onChange={this.services.bind(this)}>
-                    <option value="appointment">Appointment</option>
-                    <option value="inquiry">Inquiry</option>
-                    <option value="workshop">Workshop</option>
-                  </select>
-                </label><br/>
-          <fieldset>
-            <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
-          </fieldset>
-            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+            <button name="submit" type="submit">Submit</button>
         </form>
       </div>
+    </div>
     );
   };
 };

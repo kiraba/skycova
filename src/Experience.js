@@ -10,8 +10,17 @@ import {
   Route,
   Link
 } from 'react-router-dom';
+import ReactDOM from 'react-dom';
 
 export default class Experience extends Component {
+  componentDidMount() {
+    var edHead = ReactDOM.findDOMNode(this);
+    edHead.style.opacity=0;
+    window.requestAnimationFrame(function() {
+      edHead.style.transition = "opacity 1000ms";
+      edHead.style.opacity = 1;
+    });
+  }
   render() {
     return (
       <div>

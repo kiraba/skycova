@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './Research.css';
 import './Education';
 import './Contact';
 import $ from 'jquery';
@@ -8,16 +8,27 @@ import {
   Route,
   Link
 } from 'react-router-dom';
+import ReactDOM from 'react-dom';
 
 export default class Research extends Component {
+  componentDidMount() {
+    var edHead = ReactDOM.findDOMNode(this);
+    edHead.style.opacity=0;
+    window.requestAnimationFrame(function() {
+      edHead.style.transition = "opacity 1000ms";
+      edHead.style.opacity = 1;
+    });
+  }
   render() {
     return (
-      <div className="Research">
+      <div className="Title">
+        <h1>Research</h1>
+        <div className="Research">
         <div className="paper1">
           <div>
             <div className="thumbnail">
               <a href="#"><img className="researchPic" src="pdfIcon.png" alt="pdf"/></a>
-                <div className="caption">
+              <div className="caption">
                   <h3>Sky's Research</h3>
                   <p>This is info about research</p>
                 </div>
@@ -46,6 +57,7 @@ export default class Research extends Component {
             </div>
           </div>
         </div>
+      </div>
         {/*<a className="btn" href="#">Get Started</a>*/}
       </div>
     );

@@ -1,0 +1,34 @@
+/*Research*/
+.Title {
+    font-size: calc(3vw + 4vh);
+    text-align: center;
+  }
+
+  .Research {
+    display: grid;
+    grid-template-columns: 5% 25% 5% 25% 5% 25% 5%;
+    grid-template-rows: 10% 5% 15% 5% 15%;
+  }
+    .Research div {
+      text-align: center;
+    }
+    .Research .paper1 {
+      grid-column-start: 2;
+    }
+    .Research .paper2 {
+      grid-column-start: 4;
+    }
+    .Research .paper3 {
+      grid-column-start: 6;
+    }
+    .Research .researchPic {
+      width: 75%;
+      height: 75%;
+    }
+    .Research h3 {
+      font-size: calc(2vh + 1vw);
+      text-align: center;
+    }
+    .Research p {
+      font-size: calc(1vh + 1vw);
+    }
