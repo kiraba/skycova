@@ -6,6 +6,7 @@
     "body-parser": "^1.17.2",
     "bootstrap": "^3.3.7",
     "express": "^4.15.4",
+    "netlify-cli": "^1.2.2",
     "nodemailer": "^4.0.1",
     "oauth2": "0.0.1",
     "prop-types": "^15.5.10",

@@ -40,10 +40,8 @@ h3 {
 }
 
 #contact {
-  display: grid;
-  align-items: center;
   z-index: 1;
-  margin-left: 20px;
+  margin-left: 10%;
   border: solid teal 2px;
   background: transparent;
   width: 80%;

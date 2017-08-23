@@ -25,7 +25,11 @@ export default class Home extends Component {
   render(){
     return (
       <div name="title">
-        <h1>We never know what the day will bring.</h1>
+        <h1>We never know what the day will bring.
+          That's why my approach is awesome</h1>
+
+        <a href="http://philome.la/jace_harr/you-feel-like-shit-an-interactive-self-care-guide/play">
+          click here </a>
       </div>
     )
   }
