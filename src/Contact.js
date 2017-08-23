@@ -92,7 +92,7 @@ componentDidMount() {
   render() {
     return (
     <div>
-      <h2>Feel free to contact me by phone, 
+      <h2>Feel free to contact me by phone,
         or use the contact form below.</h2>
 
       <h3>Sky sky SKYYY, MA, LCPC<br/>
@@ -112,7 +112,16 @@ componentDidMount() {
           </fieldset>
           <fieldset>
             <input placeholder="Your Phone Number (optional)" type="tel" tabIndex="3" value={this.state.tel} onChange={this.tel}/>
-
+          </fieldset>
+          <fieldset>
+            <a>Reason for Contact - </a>  
+            <select>
+              <option value="l">Appointment</option>
+              <option value="xl">Inquiry</option>
+              <option value="m">Workshop</option>
+            </select>
+          </fieldset>
+          <fieldset>
             <textarea placeholder="Type your message here...." tabIndex="5" value={this.state.message} onChange={this.message} required></textarea>
           </fieldset>
             <button name="submit" type="submit">Submit</button>

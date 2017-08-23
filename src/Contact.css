@@ -21,6 +21,9 @@ h3 {
   font-family: 'EB Garamond', serif;
   text-align: center;
 }
+a {
+  color: teal;
+}
 
 * {
   margin: 0;
@@ -78,6 +81,7 @@ fieldset {
 #contact input,
 #contact textarea {
   width: 100%;
+  font-size: 14px;
   z-index: 1;
   border: 1px solid #ccc;
   background: #FFF;
@@ -91,6 +95,7 @@ fieldset {
 }
 
 #contact textarea {
+  font-size: 14px;
   height: 100px;
   max-width: 100%;
   resize: none;

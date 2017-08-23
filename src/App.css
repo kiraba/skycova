@@ -1,5 +1,6 @@
 /* USING BOOTSTRAP 3.0.3 */
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond|Forum');
+
 .navbar-inverse {
   background-image: url("ak08.JPG");
   border-bottom: teal 2px solid;
@@ -23,6 +24,8 @@ nav .navbar-brand {
 
 nav .navbar-toggle {
   margin-left: 50px;
+  border: teal solid 1px !important;
+
 }
 nav .navbar-nav {
   width: 100%;
@@ -61,25 +64,32 @@ nav.navbar.shrink {
 
   nav.navbar.shrink .navbar-toggle {
     padding: 10px 10px;
+    border: teal solid 1px !important;
   }
 
-.btn {
+nav.navbar-toggle{
   position: relative;
   padding: 0.3em 0.4em;
-  color: #252525; }
-  .btn:before, .btn:after {
+  color: #252525;
+  border: teal solid 1px !important;
+}
+  .button:before, .button:after {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    border: 2px solid #252525;
-    transition: transform 0.3s ease-in; }
-  .btn:hover:before, .btn:hover:after {
-    transition: transform 0.3s ease-out; }
-  .btn:hover:before {
-    transform: translate3d(-3px, 3px, 0); }
-  .btn:hover:after {
-    transform: translate3d(3px, -3px, 0); }
+    border: 2px solid teal;
+    transition: transform 0.3s ease-in;
+  }
+  .button:hover:before, .button:hover:after {
+    transition: transform 0.3s ease-out;
+  }
+  .button:hover:before {
+    transform: translate3d(-3px, 3px, 0);
+  }
+  .button:hover:after {
+    transform: translate3d(3px, -3px, 0);
+  }
 
 body {
   background-image: url("ak08.JPG");
