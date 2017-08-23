@@ -91,18 +91,17 @@ componentDidMount() {
 
   render() {
     return (
-      <div>
-      <h1>Contact</h1>
-  <h2>Feel free to contact me by phone,
-    or use the contact form below.</h2>
+    <div>
+      <h2>Feel free to contact me by phone, 
+        or use the contact form below.</h2>
 
-  <h3>Sky sky SKYYY, MA, LCPC<br/>
-      Counseling Services<br/>
-      111 N. Higgins Avenue<br/>
-      Missoula, Montana 59802<br/>
-      406.360.3262<br/>
-  </h3>
-  <h2>Contact Form:</h2>
+      <h3>Sky sky SKYYY, MA, LCPC<br/>
+          Counseling Services<br/>
+          111 N. Higgins Avenue<br/>
+          Missoula, Montana 59802<br/>
+          406.360.3262<br/>
+      </h3>
+      <h2>Contact Form:</h2>
       <div className="container">
         <form id="contact" onSubmit={this.handleSubmit}>
           <fieldset>

@@ -1,4 +1,7 @@
 /*Research*/
+body {
+  margin-top: 20%;
+}
 .Title {
     font-size: calc(3vw + 4vh);
     text-align: center;
@@ -6,20 +9,26 @@
 
   .Research {
     display: grid;
-    grid-template-columns: 5% 25% 5% 25% 5% 25% 5%;
+    grid-template-columns: 5% 20% 5% 20% 5% 20% 5% 20%;
     grid-template-rows: 10% 5% 15% 5% 15%;
   }
-    .Research div {
-      text-align: center;
-    }
     .Research .paper1 {
       grid-column-start: 2;
+      border-radius: 6px;
+      border: teal 2px solid;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
     }
     .Research .paper2 {
       grid-column-start: 4;
+      border-radius: 6px;
+      border: teal 2px solid;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
     }
     .Research .paper3 {
       grid-column-start: 6;
+      border-radius: 6px;
+      border: teal 2px solid;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
     }
     .Research .researchPic {
       width: 75%;

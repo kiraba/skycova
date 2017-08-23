@@ -1,3 +1,18 @@
 .Education {
-  margin-left: 15%;
+  margin: 0% 15% 10% 15%;
+}
+h1 {
+  font-size: calc(3vw + 4vh);
+  font-family: 'EB Garamond', serif;
+}
+h3 {
+  font-size: calc(3vw + 3vh);
+  color: black;
+  font-family: 'EB Garamond', serif;
+
+}
+p, li {
+  font-size: calc(2vw + 1vh);
+  font-family: 'Forum', cursive;
+  color: black;
 }

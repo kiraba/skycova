@@ -28,7 +28,7 @@ export default class App extends Component {
           <nav className="navbar navbar-inverse navbar-fixed-top">
             <div className="container">
               <div className="navbar-header">
-                <h1><a className="navbar-brand" href="./Home">J. Sky Cova</a></h1>
+                <h1><a className="navbar-brand" href="./Home">J. Sky Cova, LPC</a></h1>
                 <button type="button" className="navbar-toggle" data-toggle="collapse"
                   data-target=".navbar-collapse">
                   <span className="icon-bar"></span>

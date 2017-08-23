@@ -52,7 +52,7 @@ export default class Research extends Component {
               <a href="#"><img className="researchPic" src="pdfIcon.png" alt="pdf"/></a>
                 <div className="caption">
                   <h3>Sky's Research</h3>
-                  <p>This is info about research</p>
+                  
                 </div>
             </div>
           </div>

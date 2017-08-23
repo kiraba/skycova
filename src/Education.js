@@ -20,7 +20,7 @@ export default class Education extends Component {
   render() {
 	   return(
 			<div className="Education">
-				<div id="edHead"><h1>Edumication</h1></div>
+				<div id="edHead"><h3>Edumication</h3></div>
 				    <p className="education">
               Introduction: My name is Sky.  I am from helena and I love the outdoors!!
             </p>
